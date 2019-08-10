@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <h1>Login</h1>
+    </header>
+    <section>
+        <button id="dev">Desenvolvedor</button>
+        <button id="inst">Instituição</button>
+        <!-- Aqui em vez de fazer outra div para empresa, podemos fazer um script js para alterar a class
+        desta div e o action do form para ir para o action da empresa, quando a pessoa selecionar se é 
+        empresa ou dev no botão -->
+        <div id="dev">
+            <form id="frm1" action="logindev" method="post">
+                Email:
+                <input type="text" name="email">
+                Senha:
+                <input type="password" name="pass">
+                <input type="submir" value="Entrar">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <a>Desenvolvido por João Lucas e Kevin Christian</a>
+    </footer>
+</body>
+
+</html>
