@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <h1>Cadastro</h1>
+    </header>
+    <section>
+        <!-- Aqui temos que adicionar um script js para quando o usuário clicar no botão desenvolvedor aparecer
+        o form de cadastro do desenvolvedor e quando clicar no de instituição aparecer o form de cadastro 
+        da instiuição -->
+        <button>Desenvolvedor</button>
+        <button>Instituição</button>
+        <div class="dev">
+            <form action="" method="post">
+                <label>Nome</label>
+                <input type="text" name="nome">
+                <label for="genero">Gênero</label>
+                <select name="genero" id="">
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                    <option value="O">Outro</option>
+                </select>
+                <label for="interesse">Interesse</label>
+                <select name="interesse" id="">
+                    <option value="Front-End">Front-End</option>
+                    <option value="Back-End">Back-End</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Full Stack">Full Stack</option>
+                    <option value="Data Science">Data Science</option>
+                </select>
+                <label>Telefone(WhatsApp)</label>
+                <input type="number" name="telefone">
+                <label>Email</label>
+                <input type="email" name="email">
+                <label>Senha</label>
+                <input type="password" name="senha">
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+        <div class="empresa">
+            <form action="" method="post">
+                <label>Nome da Instituição</label>
+                <input type="text" name="nome">
+                <label for="genero">Segmento</label>
+                <select name="segmento" id="">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <label>Telefone(WhatsApp)</label>
+                <input type="number" name="telefone">
+                <label>Email Corporativo</label>
+                <input type="email" name="email">
+                <label>Senha</label>
+                <input type="password" name="senha">
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <a>Desenvolvido por João Lucas e Kevin Christian</a>
+    </footer>
+</body>
+
+</html>
