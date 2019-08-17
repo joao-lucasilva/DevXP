@@ -19,17 +19,20 @@
         <button>Desenvolvedor</button>
         <button>Instituição</button>
         <div class="dev">
-            <form action="" method="post">
+            <form action="cadastroDev" method="post">
+                {% csrf_token %}
                 <label>Nome</label>
                 <input type="text" name="nome">
                 <label for="genero">Gênero</label>
                 <select name="genero" id="">
+                    <option value=""></option>
                     <option value="M">Masculino</option>
                     <option value="F">Feminino</option>
                     <option value="O">Outro</option>
                 </select>
                 <label for="interesse">Interesse</label>
                 <select name="interesse" id="">
+                    <option value=""></option>
                     <option value="Front-End">Front-End</option>
                     <option value="Back-End">Back-End</option>
                     <option value="Mobile">Mobile</option>
@@ -45,15 +48,16 @@
                 <input type="submit" value="Cadastrar">
             </form>
         </div>
-        <div class="empresa">
+        {% comment %} <div class="empresa">
             <form action="" method="post">
                 <label>Nome da Instituição</label>
                 <input type="text" name="nome">
                 <label for="genero">Segmento</label>
                 <select name="segmento" id="">
                     <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option value="Educacional">OnG educacional</option>
+                    <option value="Ambiental">OnG ambiental</option>
+                    <option value="Médica">OnG médica</option>
                 </select>
                 <label>Telefone(WhatsApp)</label>
                 <input type="number" name="telefone">
@@ -63,7 +67,7 @@
                 <input type="password" name="senha">
                 <input type="submit" value="Cadastrar">
             </form>
-        </div>
+        </div> {% endcomment %}
     </section>
     <footer>
         <a>Desenvolvido por João Lucas e Kevin Christian</a>

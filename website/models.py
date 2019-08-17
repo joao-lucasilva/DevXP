@@ -91,6 +91,7 @@ class Projeto(models.Model):
         verbose_name='Descreva seu projeto'
     )
     proposta = models.TextField(
+        blank=True,
         verbose_name='Faça uma proposta'
     )
     data_criacao = models.DateTimeField(auto_now_add=True)

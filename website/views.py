@@ -26,7 +26,7 @@ def cadastroDev(request):
         }
         return render(request, 'login.html', contexto)
 
- return render(request, 'cadastro.html', contexto)
+    return render(request, 'cadastro.html', contexto)
 
 def loginDev(request):
         if request.method == 'POST':
@@ -58,6 +58,42 @@ def cadastroInst(request):
                }
                return render(request, 'login.html', contexto)
 
- return render(request, 'cadastro.html', contexto)
+        return render(request, 'cadastro.html', contexto)
+
+def loginInst(request):
+        if request.method == 'POST':
+                email_form = request.POST.get('email')
+                senha_form = request.POST.get('pass')
+                login1 = Instituicao.objects.filter(email_inst=email_form)
+                login2 = Instituicao.objects.filter(senha_inst=senha_form)
+
+                if login1 and login2 is None:
+                        contexto = {'msg': 'Email ou senha inválidos'}
+                        return render(request, 'login.html', contexto)
+                else:
+                        contexto = {'Instituicao': login1}
+                        return render(request, 'cadastrarideia.html', contexto)
+                return render(request, 'login.html', {})
+                
+def cadastrarProjeto(request):
+        if request.method == 'POST':
+                instituicao = request.POST.get('instituicao')
+                instituicao = Instituicao.objects.filter(nome_inst=instituicao).first()
+                if instituicao is not None:
+                        proj = Projeto()
+                        proj.instituicao = instituicao
+                        proj.nome_projeto = request.POST.get('nome')
+                        proj.descricao = request.POST.get('descricao')
+                        proj.save()
+
+                        return redirect('/listar')
+        return render(request, 'cadastrarideia.html', {})
+
+def listarProjetos(request):
+        projetos = Projeto.objects.filter(ativo=True).all()
+        contexto = {
+                'projetos':projetos
+        }
+        return render(request, 'listar.html', contexto)
 
 

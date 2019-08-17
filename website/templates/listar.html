@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projetos</title>
+</head>
+
+<body>
+    <nav>
+        <a href="cadastrarideia.html">Cadastrar projeto</a>
+        <a href="">Ver projetos</a>
+        <a href="sobre.html">Sobre nós</a>
+    </nav>
+    <h1>Listagem daos Projetos</h1>
+    <p>
+        {% for proj in projetos %}
+        <p>{{proj.instituicao.nome_inst}}</p>
+        <p>{{proj.nome_proj}}</p>
+        <p>{{proj.descricao}}</p>
+        <hr>
+        {% endfor %}
+    </p>
+</body>
+
+</html>
