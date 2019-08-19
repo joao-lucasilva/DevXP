@@ -5,31 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <link rel="shortcut icon" href="css/img/icone_pg.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Days+One|Nunito|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">>
+    <script defer src="js/login.js"></script>
+    <title>DevXP - Login</title>
 </head>
 
 <body>
+    <nav>
+        <div>
+            <img src="css/img/logo.png" alt="">
+        </div>
+        <p>
+            | <a href="index.html">Home</a>
+            | <a href="login.html">Entrar</a>
+            | <a href="cadastro.html">Cadastre-se</a>
+            | <a href="sobre.html">Sobre </a> |
+        </p>
+    </nav>
+    <section class="espaco-none">
+        
+    </section>
     <header>
-        <h1>Login</h1>
-    </header>
-    <section>
-        <button id="dev">Desenvolvedor</button>
-        <button id="inst">Instituição</button>
+        <h1>Entrar</h1>
+        <div class="botao-cads">
+            <button id="dev">Desenvolvedor</button>
+            <button id="inst">Instituição</button>
+        </div>
         <!-- Aqui em vez de fazer outra div para empresa, podemos fazer um script js para alterar a class
         desta div e o action do form para ir para o action da empresa, quando a pessoa selecionar se é 
         empresa ou dev no botão -->
         <div id="dev">
             <form id="frm1" action="logindev" method="post">
-                Email:
+                <label for="">Email:</label>
                 <input type="text" name="email">
-                Senha:
+                <label for="">Senha:</label>
                 <input type="password" name="pass">
-                <input type="submir" value="Entrar">
+                <div class="posicao-button">
+                    <button type="submit">Entre</button>
+                </div>
             </form>
         </div>
+    </header>
+    <section>
+
     </section>
     <footer>
-        <a>Desenvolvido por João Lucas e Kevin Christian</a>
+        <div class="redes-sociais">
+            <a href="#"><img src="css/img/icon1.png" alt="" style="height: 25px">facebook.com/devxp</a>
+            <a href="#"><img src="css/img/icon3.png" alt="" style="height: 25px">instagram.com/devxp</a>
+            <a href="#"><img src="css/img/icon2.png" alt="" style="height: 25px">youtube.com/devxp</a>
+        </div>
+        <p class="texto-dev">Desenvolvido por João Lucas e Kevin Christian</p>
     </footer>
 </body>
 

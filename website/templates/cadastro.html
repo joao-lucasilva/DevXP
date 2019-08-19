@@ -5,72 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro</title>
+    <link rel="shortcut icon" href="css/img/icone_pg.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Days+One|Nunito|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">>
+    <title>DevXP - Cadastro</title>
 </head>
 
 <body>
+    <nav>
+        <div>
+            <img src="css/img/logo.png" alt="">
+        </div>
+        <p>
+            | <a href="index.html">Home</a>
+            | <a href="login.html">Entrar</a>
+            | <a href="cadastro.html">Cadastre-se</a>
+            | <a href="sobre.html">Sobre </a> |
+        </p>
+    </nav>
     <header>
         <h1>Cadastro</h1>
-    </header>
-    <section>
         <!-- Aqui temos que adicionar um script js para quando o usuário clicar no botão desenvolvedor aparecer
         o form de cadastro do desenvolvedor e quando clicar no de instituição aparecer o form de cadastro 
         da instiuição -->
-        <button>Desenvolvedor</button>
-        <button>Instituição</button>
+        <div class="botao-cads">
+            <button>Desenvolvedor</button>
+            <button>Instituição</button>
+        </div>
         <div class="dev">
-            <form action="cadastroDev" method="post">
-                {% csrf_token %}
+            <form action="" method="post">
                 <label>Nome</label>
                 <input type="text" name="nome">
+                <label>Email</label>
+                <input type="email" name="email">
+                <label>Senha</label>
+                <input type="password" name="senha">
+                <label>Confirme sua senha</label>
+                <input type="password" name="senha_confirm">
                 <label for="genero">Gênero</label>
-                <select name="genero" id="">
-                    <option value=""></option>
+                <select name="genero" id="genero">
                     <option value="M">Masculino</option>
                     <option value="F">Feminino</option>
                     <option value="O">Outro</option>
                 </select>
                 <label for="interesse">Interesse</label>
                 <select name="interesse" id="">
-                    <option value=""></option>
-                    <option value="Front-End">Front-End</option>
-                    <option value="Back-End">Back-End</option>
-                    <option value="Mobile">Mobile</option>
-                    <option value="Full Stack">Full Stack</option>
-                    <option value="Data Science">Data Science</option>
+
                 </select>
                 <label>Telefone(WhatsApp)</label>
                 <input type="number" name="telefone">
-                <label>Email</label>
-                <input type="email" name="email">
-                <label>Senha</label>
-                <input type="password" name="senha">
-                <input type="submit" value="Cadastrar">
+                <div class="posicao-button">
+                    <button type="submit">Cadastrar</button>
+                </div>
             </form>
         </div>
-        {% comment %} <div class="empresa">
+        <!--      <div class="empresa">
             <form action="" method="post">
                 <label>Nome da Instituição</label>
                 <input type="text" name="nome">
-                <label for="genero">Segmento</label>
-                <select name="segmento" id="">
-                    <option value=""></option>
-                    <option value="Educacional">OnG educacional</option>
-                    <option value="Ambiental">OnG ambiental</option>
-                    <option value="Médica">OnG médica</option>
-                </select>
-                <label>Telefone(WhatsApp)</label>
-                <input type="number" name="telefone">
                 <label>Email Corporativo</label>
                 <input type="email" name="email">
                 <label>Senha</label>
                 <input type="password" name="senha">
-                <input type="submit" value="Cadastrar">
+                <label>Confirme sua senha</label>
+                <input type="password" name="senha_confirm">
+                <label for="genero">Segmento</label>
+                <select name="segmento" id="">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <label>Telefone(WhatsApp)</label>
+                <input type="number" name="telefone">
+                <div class="posicao-button">
+                    <button type="submit">Cadastrar</button>
+                </div>
             </form>
-        </div> {% endcomment %}
-    </section>
+        </div>
+    -->
+    </header>
     <footer>
-        <a>Desenvolvido por João Lucas e Kevin Christian</a>
+        <div class="redes-sociais">
+            <a href="#"><img src="css/img/icon1.png" alt="" style="height: 25px">facebook.com/devxp</a>
+            <a href="#"><img src="css/img/icon3.png" alt="" style="height: 25px">instagram.com/devxp</a>
+            <a href="#"><img src="css/img/icon2.png" alt="" style="height: 25px">youtube.com/devxp</a>
+        </div>
+        <p class="texto-dev">Desenvolvido por João Lucas e Kevin Christian</p>
     </footer>
 </body>
 
