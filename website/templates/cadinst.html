@@ -34,52 +34,20 @@
             <button>Desenvolvedor</button>
             <button>Instituição</button>
         </div>
-        <div class="dev">
-            <form action="cadastro" method="post">{% csrf_token %}
-                <label>Nome</label>
-                <input type="text" name="nome">
-                <label>Email</label>
-                <input type="email" name="email">
-                <label>Senha</label>
-                <input type="password" name="senha">
-                <label for="genero">Gênero</label>
-                <select name="genero" id="genero">
-                    <option value=""></option>
-                    <option value="M">Masculino</option>
-                    <option value="F">Feminino</option>
-                    <option value="O">Outro</option>
-                </select>
-                <label for="interesse">Interesse</label>
-                <select name="interesse" id="">
-                    <option value=""></option>
-                    <option value="Front-End">Front-End</option>
-                    <option value="Back-End">Back-End</option>
-                    <option value="Mobile">Mobile</option>
-                    <option value="Full Stack">Full Stack</option>
-                    <option value="Data Science">Data Science</option>
-                </select>
-                <label>Telefone(WhatsApp)</label>
-                <input type="number" name="telefone">
-                <div class="posicao-button">
-                    <button type="submit">Cadastrar</button>
-                </div>
-            </form>
-        </div>
-        <!--      <div class="empresa">
-            <form action="" method="post">
+           <div class="empresa">
+            <form action="cadinst" method="post">{% csrf_token %}
                 <label>Nome da Instituição</label>
                 <input type="text" name="nome">
                 <label>Email Corporativo</label>
                 <input type="email" name="email">
                 <label>Senha</label>
                 <input type="password" name="senha">
-                <label>Confirme sua senha</label>
-                <input type="password" name="senha_confirm">
                 <label for="genero">Segmento</label>
                 <select name="segmento" id="">
                     <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option value="Educacional">Educacional</option>
+                    <option value="Ambiental">Ambiental</option>
+                    <option value="Médica">Médica</option>                    
                 </select>
                 <label>Telefone(WhatsApp)</label>
                 <input type="number" name="telefone">
@@ -88,7 +56,6 @@
                 </div>
             </form>
         </div>
-    -->
     </header>
     <footer>
         <div class="redes-sociais">

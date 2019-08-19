@@ -7,24 +7,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="css/img/icone_pg.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'css/img/icone_pg.ico' %}" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Anton|Days+One|Nunito|Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>DevXP</title>
 </head>
 
 <body>
     <nav>
-        <p>
-            | <a href="index.html">Home</a>
-            | <a href="login.html">Entrar</a>
-            | <a href="cadastro.html">Cadastre-se</a>
-            | <a href="sobre.html">Sobre</a> |
+       <p>
+            | <a href="index">Home</a>
+            | <a href="login">Entrar</a>
+            | <a href="cadastro">Cadastre-se</a>
+            | <a href="sobre">Sobre </a> |
         </p>
     </nav>
     <section class="espaco-none"></section>
     <header>
-            <img src="css/img/logo.png" alt="">
+            <img src="{% static 'css/img/logo.png' %}" alt="Logo do site">
             <h1>DevXP</h1>
         <p>Quer ter sua instituição na internet? Precisa de algum serviço tecnologico?
             Tem conhecimentos em tecnologia, mas não consegue emprego? Precisa de experiência?</p>
@@ -33,14 +33,14 @@
     </header>
 
     <section>
-        <span class="botao"><a href="login.html">Entrar</a></span>
-        <span class="botao"><a href="cadastro.html">Cadastre-se</a></span>
+        <span class="botao"><a href="login">Entrar</a></span>
+        <span class="botao"><a href="cadastro">Cadastre-se</a></span>
     </section>
     <footer>
         <div class="redes-sociais">
-            <a href="#"><img src="css/img/icon1.png" alt="" style="height: 25px">facebook.com/devxp</a>
-            <a href="#"><img src="css/img/icon3.png" alt="" style="height: 25px">instagram.com/devxp</a>
-            <a href="#"><img src="css/img/icon2.png" alt="" style="height: 25px">youtube.com/devxp</a>
+            <a href="#"><img src="{% static 'css/img/icon1.png' %}" alt="Logo do facebook" style="height: 25px">facebook.com/devxp</a>
+            <a href="#"><img src="{% static 'css/img/icon3.png' %}" alt="Logo do instagram" style="height: 25px">instagram.com/devxp</a>
+            <a href="#"><img src="{% static 'css/img/icon2.png' %}" alt="Logo do youtube" style="height: 25px">youtube.com/devxp</a>
         </div>
         <p class="texto-dev">Desenvolvido por João Lucas e Kevin Christian</p>
     </footer>

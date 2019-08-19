@@ -1,9 +1,13 @@
-from django.urls import path
-
-from . import views
+from django.urls import path, include
+from website.views import index, sobre ,cadastroDev, cadastroInst, loginDev, loginInst, cadastrarProjeto, listarProjetos
 
 urlpatterns = [
-    path('', views.index),
-    path('cadastro.html', views.cadastroDev),
-    path('login.html', views.loginDev)
+    path('index', index),
+    path('cadastro', cadastroDev),
+    path('login', loginDev),
+    path('cadinst', cadastroInst),
+    path('loginst', loginInst),
+    path('sobre', sobre),
+    path('listar', listarProjetos),
+    path('cadastrar_projeto', cadastrarProjeto)
 ]

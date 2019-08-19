@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,25 +7,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>cadastrar Projeto</title>
 </head>
 
 <body>
     <nav>
-        <a href="cadastrarideia.html">Cadastrar projeto</a>
-        <a href="">Ver projetos</a>
-        <a href="sobre.html">Sobre nós</a>
+        <a href="cadastrar_projeto">Cadastrar projeto</a>
+        <a href="listar">Ver projetos</a>
+        <a href="sobre">Sobre nós</a>
     </nav>
     <header>
-        <h1>Cadastre seu projeto</h1>
+    
+        <h1>Cadastre seu projeto {{msg}}{{instituicao.nome_inst}}</h1>
     </header>
     <section>
-        <form action="" method="post">
-            <input type="hidden" name="instituicao" value="{{instituicao.nome_inst}}">
+        <form action="cadastrar_projeto" method="post">{% csrf_token %}
+            <input type="hidden" name="inst" value="{{instituicao.nome_inst}}">
             <label for="nome">Título do Projeto</label>
             <input type="text" name="nome" id="">
             <label for="descricao">Descreva seu projeto</label>
             <textarea name="descricao" id="" cols="30" rows="15"></textarea>
+            <input type="submit" value="Cadastrar">
+            {{ msg }}
         </form>
     </section>
 </body>

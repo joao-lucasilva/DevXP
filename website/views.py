@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from website.models import Desenvolvedor, Instituicao, Projeto
 
@@ -9,24 +9,29 @@ def index(request):
     contexto = {}
     return render(request, 'index.html', contexto)
 
+def sobre(request):
+        contexto = {}
+        return render(request, 'sobre.html', contexto)
 
 def cadastroDev(request):
-    contexto = {}
-    if request.method == 'POST':
-        dev = Desenvolvedor()
-        dev.nome = request.POST.get('nome')
-        dev.genero = request.POST.get('genero')
-        dev.interesse = request.POST.get('interesse')
-        dev.telefone = request.POST.get('telefone')
-        dev.email = request.POST.get('email')
-        dev.senha = request.POST.get('senha')
-        dev.save()
-        contexto = {
+        contexto = {}
+        print('aaaaaaa')
+        if request.method == 'POST':
+                print('bbbbbbb')
+                dev = Desenvolvedor()
+                dev.nome = request.POST.get('nome')
+                dev.genero = request.POST.get('genero')
+                dev.interesse = request.POST.get('interesse')
+                dev.telefone = request.POST.get('telefone')
+                dev.email = request.POST.get('email')
+                dev.senha = request.POST.get('senha')
+                dev.save()
+                print('qqqqqqqq')
+                contexto = {
                 'msg': 'Cadastro realizado com sucesso'
-        }
-        return render(request, 'login.html', contexto)
-
-    return render(request, 'cadastro.html', contexto)
+                }
+                return render(request, 'login.html', contexto)
+        return render(request, 'cadastro.html', contexto)
 
 def loginDev(request):
         if request.method == 'POST':
@@ -36,12 +41,12 @@ def loginDev(request):
                 login2 = Desenvolvedor.objects.filter(senha=senha_form).first()
 
                 if login1 and login2 is None:
-                        contexto = {'msg': 'Email ou senha incorretos'}
-                        return render(request, 'login.html', contexto)
+                        msg = {'msg': 'Email ou senha incorretos'}
+                        return render(request, 'login.html', msg)
                 else:
-                        contexto = {'Desenvolvedor': login1}
-                        return render(request, 'sobre.html', contexto)
-                return render(request, 'login.html',{})
+                        msg = {'Desenvolvedor': login1}
+                        return render(request, 'listar.html', msg)
+        return render(request, 'login.html',{})
 
 def cadastroInst(request):
         contexto = {}
@@ -56,37 +61,43 @@ def cadastroInst(request):
                contexto = {
                        'msg':'Cadastro realizado com sucesso'
                }
-               return render(request, 'login.html', contexto)
+               return render(request, 'loginst.html', contexto)
 
-        return render(request, 'cadastro.html', contexto)
+        return render(request, 'cadinst.html', contexto)
 
 def loginInst(request):
         if request.method == 'POST':
                 email_form = request.POST.get('email')
                 senha_form = request.POST.get('pass')
-                login1 = Instituicao.objects.filter(email_inst=email_form)
-                login2 = Instituicao.objects.filter(senha_inst=senha_form)
+                login1 = Instituicao.objects.filter(email_inst=email_form).first()
+                login2 = Instituicao.objects.filter(senha_inst=senha_form).first()
 
                 if login1 and login2 is None:
-                        contexto = {'msg': 'Email ou senha inválidos'}
-                        return render(request, 'login.html', contexto)
+                        msg = {'msg': 'Email ou senha inválidos'}
+                        return render(request, 'login.html', msg)
                 else:
-                        contexto = {'Instituicao': login1}
-                        return render(request, 'cadastrarideia.html', contexto)
-                return render(request, 'login.html', {})
+                        msg = {'instituicao': login1}
+                        print('Login sucess')
+                        return render(request, 'cadastrarideia.html', msg)
+        return render(request, 'login.html', {})
                 
 def cadastrarProjeto(request):
         if request.method == 'POST':
-                instituicao = request.POST.get('instituicao')
-                instituicao = Instituicao.objects.filter(nome_inst=instituicao).first()
-                if instituicao is not None:
+                print('aaaaaaa')
+                inst = request.POST.get('inst')
+                inst = Instituicao.objects.filter(nome_inst=inst).first()
+                print('está quase')
+                print(inst)
+                if inst is not None:
+                        print('tá indo')
                         proj = Projeto()
-                        proj.instituicao = instituicao
+                        proj.inst = instituicao
                         proj.nome_projeto = request.POST.get('nome')
                         proj.descricao = request.POST.get('descricao')
                         proj.save()
-
-                        return redirect('/listar')
+                        msg = {'msg':'Cadastrado com Sucesso!'}
+                        print('foi essa disgraçaaaaaaaa')
+                        return render(request, 'listar.html',msg)
         return render(request, 'cadastrarideia.html', {})
 
 def listarProjetos(request):

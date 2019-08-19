@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,10 +12,11 @@
 
 <body>
     <nav>
-        <a href="cadastrarideia.html">Cadastrar projeto</a>
-        <a href="">Ver projetos</a>
-        <a href="sobre.html">Sobre nós</a>
+        <a href="cadastrar_projeto">Cadastrar projeto</a>
+        <a href="listar">Ver projetos</a>
+        <a href="sobre">Sobre nós</a>
     </nav>
+    <p>Bem vindo {{ msg }}</p>
     <h1>Listagem daos Projetos</h1>
     <p>
         {% for proj in projetos %}
