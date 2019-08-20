@@ -82,7 +82,7 @@ header .cadastro button{
     font-family: 'Nunito', sans-serif;
     font-size: 14pt;
     cursor: pointer;
-    width: 145px;
+    width: 130px;
     padding: 5px 8px;
     margin: 5px 0;
 }
@@ -90,6 +90,34 @@ header .cadastro button{
 header .cadastro button:hover{
     background-color: #168039;
     border-color: #168039;
+    color: #ffffff;
+}
+
+header .botao-sair button{
+    background-color: #00261C;
+    border-radius: 5px;
+    border-color: #00261C;
+    color: #45BF55;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12pt;
+    cursor: pointer;
+    width: 60px;
+    padding: 5px 5px;
+}
+
+header .botao-sair button a{
+    text-decoration: none;
+    color: #45BF55;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12pt;
+}
+
+header .botao-sair button:hover{
+    background-color: #168039;
+    border-color: #168039;
+}
+
+header .botao-sair button a:hover{
     color: #ffffff;
 }
 
@@ -127,7 +155,7 @@ header .cadastro form textarea{
 }
 
 header .cadastro form button{
-    margin-left: 85px;
+    margin-left: 88px;
 }
 
 section{

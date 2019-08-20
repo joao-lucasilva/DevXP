@@ -15,8 +15,8 @@
 <body>
     <nav>
     <div>
-            <img src="{% static 'css/img/logo.png' %}" alt="Logo do site">
-        </div>
+        <img src="{% static 'css/img/logo.png' %}" alt="Logo do site">
+    </div>
     </nav>
     <header>
     <h1>Projetos Abertos</h1>
@@ -27,9 +27,12 @@
         <p>{{proj.descricao}}</p>
         <p>Telefone para Contato: {{proj.instituicao.telefone_inst}}</p>
         <hr></hr>
-        
+
         {% endfor %}
     </p>
+    <div class="botao-sair">
+        <button><a href="login">Sair</a></button>
+    </div>
     </header>
     <footer>
         <div class="redes-sociais">

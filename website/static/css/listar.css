@@ -8,7 +8,7 @@ body{
                          'section section section section'
                          'footer footer footer footer';
     grid-template-columns: 25.4vw 24vw 24vw 25.3vw;
-    grid-template-rows: 8vh 7vh 120vh 7vh 15vh;
+    grid-template-rows: 8vh 7vh 125vh 7vh 15vh;
 }
 
 header, section, footer{
@@ -46,6 +46,30 @@ nav a{
 
 nav a:hover{
     color: #ffffff;
+}
+
+header .botao-sair button{
+    background-color: #00261C;
+    border-radius: 5px;
+    border-color: #00261C;
+    color: #45BF55;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12pt;
+    cursor: pointer;
+    width: 60px;
+    padding: 5px 5px;
+}
+
+header .botao-sair button a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12pt;
+}
+
+header .botao-sair button:hover{
+    background-color: #168039;
+    border-color: #168039;
 }
 
 .espaco-none{
