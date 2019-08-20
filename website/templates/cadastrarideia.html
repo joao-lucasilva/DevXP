@@ -7,36 +7,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{% static 'css/img/icone_pg.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/cadastra_ideia.css' %}">
     <title>cadastrar Projeto</title>
 </head>
 
 <body>
-    <nav>
-        <div>
-            <img src="{% static 'css/img/logo.png' %}" alt="Logo do site">
-        </div>
-        <a href="cadastrar_projeto">Cadastrar projeto</a>
-        <a href="listar">Ver projetos</a>
-    </nav>
-    <header>
+        <nav>
+                <div>
+                    <img src="{% static 'css/img/logo.png' %}" alt="Logo do site">
+                </div>
+                <p>
+                    | <a href="cadastrar_projeto">Cadastrar projeto</a>
+                    | <a href="listar">Ver projetos</a> |
+                </p>
+            </nav>
+    
     {% if inst or instituicao is None %}
+    <header>
         <h1>Ops!, você precisa se cadastrar primeiro :|</h1>
         <p>
-            <a href="/cadinst">Clique aqui para se cadastrar</a>
+            <a class="sem_cadastro" href="/cadinst">Clique aqui para se cadastrar</a>
         </p>
+    </header>
+        <section>
+        
+            </section>
+            <footer>
+                <div class="redes-sociais">
+                    <a href="#"><img src="{% static 'css/img/icon1.png' %}" alt="Logo do facebook"
+                            style="height: 25px">facebook.com/devxp</a>
+                    <a href="#"><img src="{% static 'css/img/icon3.png' %}" alt="Logo do instagram"
+                            style="height: 25px">instagram.com/devxp</a>
+                    <a href="#"><img src="{% static 'css/img/icon2.png' %}" alt="Logo do youtube"
+                            style="height: 25px">youtube.com/devxp</a>
+                </div>
+                <p class="texto-dev">Desenvolvido por João Lucas e Kevin Christian</p>
+            </footer>
     {% else %}
+    <header>
         <h1>Cadastre seu projeto {{msg}}{{instituicao.nome_inst}}</h1>
+        <div class="cadastro"> 
+        <form action="cadastrar_projeto" method="post">{% csrf_token %}
+                <input type="hidden" name="inst" value="{{instituicao.nome_inst}}">
+                <label for="nome">Título do Projeto</label>
+                <input type="text" name="nome" id="">
+                <label for="descricao">Descreva seu projeto</label>
+                <textarea name="descricao" id="" cols="30" rows="15"></textarea>
+                <button type="submit">Cadastrar</button>
+                {{ msg }}
+            </form>
+        </div>
     </header>
     <section>
-        <form action="cadastrar_projeto" method="post">{% csrf_token %}
-            <input type="hidden" name="inst" value="{{instituicao.nome_inst}}">
-            <label for="nome">Título do Projeto</label>
-            <input type="text" name="nome" id="">
-            <label for="descricao">Descreva seu projeto</label>
-            <textarea name="descricao" id="" cols="30" rows="15"></textarea>
-            <input type="submit" value="Cadastrar">
-            {{ msg }}
-        </form>
+        
     </section>
     <footer>
         <div class="redes-sociais">

@@ -1,0 +1,202 @@
+body{
+    background-color: #97ED8A;
+    margin: 0;
+    display: grid;
+    grid-template-areas: 'nav nav nav nav'
+                         'espaco-none espaco-none espaco-none espaco-none'
+                         'header header header header'
+                         'section section section section'
+                         'footer footer footer footer';
+    grid-template-columns: 25.4vw 24vw 24vw 25.3vw;
+    grid-template-rows: 8vh 7vh 75vh 7vh 15vh;
+}
+
+header, section, footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+nav{
+    grid-area: nav;
+    background-color: #00261C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav img{
+    height: 50px;
+    margin-right: 5px;
+}
+
+nav p{
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20pt;
+    color: #05F29B; 
+}
+
+nav a{
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14pt;
+    color: #05F29B; 
+}
+
+nav a:hover{
+    color: #ffffff;
+}
+
+.espaco-none{
+    grid-area: espaco-none;
+    background-color: #97ED8A;
+}
+
+header{
+    grid-area: header;
+    background-color: #45BF55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    color: #ffffff;
+    font-family: 'Days One', sans-serif;
+    font-size: 25pt;
+    margin: 10px 10px;
+}
+
+header .sem_cadastro{
+    color: #00261C;
+    font-family: 'Days One', sans-serif;
+    font-size: 12pt;
+}
+
+header .cadastro button{  
+    background-color: #00261C;
+    border-radius: 5px;
+    border-color: #00261C;
+    color: #45BF55;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14pt;
+    cursor: pointer;
+    width: 145px;
+    padding: 5px 8px;
+    margin: 5px 0;
+}
+
+header .cadastro button:hover{
+    background-color: #168039;
+    border-color: #168039;
+    color: #ffffff;
+}
+
+header .cadastro form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12pt;
+    color: #00261C;
+}
+
+header .cadastro form input{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    height: 4vh;
+    width: 300px;
+    border-radius: 5px;
+}
+
+header .cadastro form label{
+    margin-top: 10px;
+}
+
+header .cadastro form textarea{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    height: 30vh;
+    width: 300px;
+    border-radius: 5px;
+}
+
+header .cadastro form button{
+    margin-left: 85px;
+}
+
+section{
+    grid-area: section;
+    background-color: #97ED8A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+section span{
+    background-color: #168039;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+section span a{
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14pt;
+    color: #05F29B; 
+}
+
+section span:hover{
+    background-color: #00261C;
+    color: #ffffff;
+}
+
+footer{
+    grid-area: footer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 10pt;
+    background-color: #00261C;
+    display: flex;
+    align-items: center;
+
+}
+
+footer .redes-sociais{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+footer .redes-sociais a img{
+    margin: 0 5px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #05F29B;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 15px;
+}
+
+footer a:hover{
+    color: #ffffff;
+}
+
+footer p{
+    font-size: 8pt;
+    margin-top: 15px;
+    color: #ffffff;
+}

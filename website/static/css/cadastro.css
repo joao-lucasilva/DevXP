@@ -81,6 +81,13 @@ header .botao-cads button{
     margin: 5px 0;
 }
 
+header .botao-cads button a{
+    color: #45BF55;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14pt;
+text-decoration: none;
+}
+
 header .botao-cads button:hover{
     background-color: #168039;
     border-color: #168039;
@@ -137,6 +144,116 @@ header .dev form button{
 }
 
 header .dev form button:hover{
+    background-color: #168039;
+    border-color: #168039;
+    color: #ffffff;
+}
+
+header .empresa form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12pt;
+    color: #00261C;
+}
+
+header .empresa form input{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    height: 4vh;
+    width: 300px;
+    border-radius: 5px;
+}
+
+header .empresa form select{
+    background-color: #ffffff;
+    border-color: #ffffff;
+    height: 4vh;
+    width: 300px;
+    border-radius: 5px;
+}
+
+header .empresa form .posicao-button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header .empresa form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00261C;
+    border-radius: 5px;
+    border-color: #00261C;
+    color: #45BF55;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14pt;
+    margin-top: 15px;
+    height: 5.5vh;
+    width: 8vw;
+    
+}
+
+header .empresa form button:hover{
+    background-color: #168039;
+    border-color: #168039;
+    color: #ffffff;
+}
+
+header .empresa form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12pt;
+    color: #00261C;
+}
+
+header .empresa form input{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    height: 4vh;
+    width: 300px;
+    border-radius: 5px;
+}
+
+header .empresa form select{
+    background-color: #ffffff;
+    border-color: #ffffff;
+    height: 4vh;
+    width: 300px;
+    border-radius: 5px;
+}
+
+header .empresa form .posicao-button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header .empresa form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00261C;
+    border-radius: 5px;
+    border-color: #00261C;
+    color: #45BF55;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14pt;
+    margin-top: 15px;
+    height: 5.5vh;
+    width: 8vw;
+    
+}
+
+header .empresa form button:hover{
     background-color: #168039;
     border-color: #168039;
     color: #ffffff;

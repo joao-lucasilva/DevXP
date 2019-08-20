@@ -6,29 +6,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'css/img/icone_pg.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/listar.css' %}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Projetos</title>
 </head>
 
 <body>
-    <nav>
-    <div>
-            <img src="{% static 'css/img/logo.png' %}" alt="Logo do site">
-        </div>
-        <a href="cadastrar_projeto">Cadastrar projeto</a>
-        <a href="listar">Ver projetos</a>
-    </nav>
+        <nav>
+                <div>
+                    <img src="{% static 'css/img/logo.png' %}" alt="Logo do site">
+                </div>
+                <p>
+                    | <a href="cadastrar_projeto">Cadastrar projeto</a>
+                    | <a href="listar">Ver projetos</a> |
+                </p>
+            </nav>
+    <header>
     <h1>Projetos Abertos</h1>
     <p>
         {% for proj in projetos %}
-        <p>{{proj.instituicao.nome_inst}}</p>
+        <h4>{{proj.instituicao.nome_inst}}</h4>
         <p>{{proj.nome_proj}}</p>
         <p>{{proj.descricao}}</p>
         <p>Telefone para Contato: {{proj.instituicao.telefone_inst}}</p>
-        <hr>
+        <hr></hr>
         
         {% endfor %}
     </p>
+    </header>
     <footer>
         <div class="redes-sociais">
             <a href="#"><img src="{% static 'css/img/icon1.png' %}" alt="Logo do facebook"
