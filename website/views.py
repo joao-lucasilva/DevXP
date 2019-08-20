@@ -15,9 +15,7 @@ def sobre(request):
 
 def cadastroDev(request):
         contexto = {}
-        print('aaaaaaa')
         if request.method == 'POST':
-                print('bbbbbbb')
                 dev = Desenvolvedor()
                 dev.nome = request.POST.get('nome')
                 dev.genero = request.POST.get('genero')
@@ -26,7 +24,6 @@ def cadastroDev(request):
                 dev.email = request.POST.get('email')
                 dev.senha = request.POST.get('senha')
                 dev.save()
-                print('qqqqqqqq')
                 contexto = {
                 'msg': 'Cadastro realizado com sucesso'
                 }
@@ -44,8 +41,8 @@ def loginDev(request):
                         msg = {'msg': 'Email ou senha incorretos'}
                         return render(request, 'login.html', msg)
                 else:
-                        msg = {'Desenvolvedor': login1}
-                        return render(request, 'listar.html', msg)
+                        msg = {'instituicao': login1}                   
+                        return redirect('http://localhost:8000/listardev')
         return render(request, 'login.html',{})
 
 def cadastroInst(request):
@@ -74,30 +71,27 @@ def loginInst(request):
 
                 if login1 and login2 is None:
                         msg = {'msg': 'Email ou senha inválidos'}
-                        return render(request, 'login.html', msg)
+                        return render(request, 'logininst.html', msg)
                 else:
                         msg = {'instituicao': login1}
                         print('Login sucess')
                         return render(request, 'cadastrarideia.html', msg)
-        return render(request, 'login.html', {})
+        return render(request, 'logininst.html', {})
                 
 def cadastrarProjeto(request):
         if request.method == 'POST':
-                print('aaaaaaa')
                 inst = request.POST.get('inst')
                 inst = Instituicao.objects.filter(nome_inst=inst).first()
-                print('está quase')
                 print(inst)
                 if inst is not None:
-                        print('tá indo')
                         proj = Projeto()
-                        proj.inst = instituicao
+                        proj.instituicao  = inst
                         proj.nome_projeto = request.POST.get('nome')
                         proj.descricao = request.POST.get('descricao')
                         proj.save()
                         msg = {'msg':'Cadastrado com Sucesso!'}
-                        print('foi essa disgraçaaaaaaaa')
-                        return render(request, 'listar.html',msg)
+                        return redirect('http://localhost:8000/listar')
+        msg = {'msg':'Erro ao cadastrar'}
         return render(request, 'cadastrarideia.html', {})
 
 def listarProjetos(request):
@@ -108,3 +102,9 @@ def listarProjetos(request):
         return render(request, 'listar.html', contexto)
 
 
+def listarDev(request):
+        projetos = Projeto.objects.filter(ativo=True).all()
+        contexto = {
+            'projetos': projetos
+        }
+        return render(request, 'listardev.html', contexto)

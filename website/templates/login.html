@@ -12,12 +12,24 @@
     <link rel="stylesheet" href="{% static 'css/login.css' %}">>
     <script defer src="js/login.js"></script>
     <title>DevXP - Login</title>
+    <script language="Javascript">
+        function validacaoEmail(field) {     
+            usuario = field.value.substring(0, field.value.indexOf("@"));
+            dominio = field.value.substring(field.value.indexOf("@") + 1, field.value.length);
+            if ((usuario.length >= 1) && (dominio.length >= 3) && (usuario.search("@") == -1) &&
+                (dominio.search("@") == -1) && (usuario.search(" ") == -1) && (dominio.search(" ") == -1) &&
+                (dominio.search(".") != -1) && (dominio.indexOf(".") >= 1) && (dominio.lastIndexOf(".") < dominio
+                    .length - 1)) {} else {
+                alert("E-mail invalido! Por favor digite um E-mail Valido!");
+            }
+        }
+    </script>
 </head>
 
 <body>
     <nav>
         <div>
-            <img src="css/img/logo.png" alt="">
+            <img src="{% static 'css/img/logo.png' %}" alt="Logo do site">
         </div>
         <p>
             | <a href="index">Home</a>
@@ -33,16 +45,16 @@
         <h1>Entrar</h1>
         {{ contexto }}
         <div class="botao-cads">
-            <button id="dev">Desenvolvedor</button>
+            <button id="dev"><a href="login">Desenvolvedor</a></button>
             <button id="inst"> <a href="loginst">Instituição</a> </button>
         </div>
         <!-- Aqui em vez de fazer outra div para empresa, podemos fazer um script js para alterar a class
         desta div e o action do form para ir para o action da empresa, quando a pessoa selecionar se é 
         empresa ou dev no botão -->
         <div id="dev">
-            <form id="frm1" action="login" method="post">{% csrf_token %}
+            <form id="frm1" action="login" method="post" name="f1">{% csrf_token %}
                 <label for="">Email:</label>
-                <input type="text" name="email">
+                <input type="text" name="email" onblur="validacaoEmail(f1.email)">
                 <label for="">Senha:</label>
                 <input type="password" name="pass">
                 <div class="posicao-button">
@@ -57,9 +69,12 @@
     </section>
     <footer>
         <div class="redes-sociais">
-            <a href="#"><img src="css/img/icon1.png" alt="" style="height: 25px">facebook.com/devxp</a>
-            <a href="#"><img src="css/img/icon3.png" alt="" style="height: 25px">instagram.com/devxp</a>
-            <a href="#"><img src="css/img/icon2.png" alt="" style="height: 25px">youtube.com/devxp</a>
+            <a href="#"><img src="{% static 'css/img/icon1.png' %}" alt="Logo do facebook"
+                    style="height: 25px">facebook.com/devxp</a>
+            <a href="#"><img src="{% static 'css/img/icon3.png' %}" alt="Logo do instagram"
+                    style="height: 25px">instagram.com/devxp</a>
+            <a href="#"><img src="{% static 'css/img/icon2.png' %}" alt="Logo do youtube"
+                    style="height: 25px">youtube.com/devxp</a>
         </div>
         <p class="texto-dev">Desenvolvido por João Lucas e Kevin Christian</p>
     </footer>

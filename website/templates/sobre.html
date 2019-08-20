@@ -16,7 +16,7 @@
 <body>
     <nav>
         <div>
-            <img src="css/img/logo.png" alt="">
+            <img src="{% static 'css/img/logo.png' %}" alt="Logo do site">
         </div>
        <p>
             | <a href="index">Home</a>
@@ -43,9 +43,12 @@
     </header>
     <footer>
         <div class="redes-sociais">
-            <a href="#"><img src="css/img/icon1.png" alt="" style="height: 25px">facebook.com/devxp</a>
-            <a href="#"><img src="css/img/icon3.png" alt="" style="height: 25px">instagram.com/devxp</a>
-            <a href="#"><img src="css/img/icon2.png" alt="" style="height: 25px">youtube.com/devxp</a>
+            <a href="#"><img src="{% static 'css/img/icon1.png' %}" alt="Logo do facebook"
+                    style="height: 25px">facebook.com/devxp</a>
+            <a href="#"><img src="{% static 'css/img/icon3.png' %}" alt="Logo do instagram"
+                    style="height: 25px">instagram.com/devxp</a>
+            <a href="#"><img src="{% static 'css/img/icon2.png' %}" alt="Logo do youtube"
+                    style="height: 25px">youtube.com/devxp</a>
         </div>
         <p class="texto-dev">Desenvolvido por João Lucas e Kevin Christian</p>
     </footer>

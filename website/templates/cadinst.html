@@ -11,6 +11,18 @@
     <link href="https://fonts.googleapis.com/css?family=Anton|Days+One|Nunito|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
     <title>DevXP - Cadastro</title>
+     <script language="Javascript">
+        function validacaoEmail(field) {     
+            usuario = field.value.substring(0, field.value.indexOf("@"));
+            dominio = field.value.substring(field.value.indexOf("@") + 1, field.value.length);
+            if ((usuario.length >= 1) && (dominio.length >= 3) && (usuario.search("@") == -1) &&
+                (dominio.search("@") == -1) && (usuario.search(" ") == -1) && (dominio.search(" ") == -1) &&
+                (dominio.search(".") != -1) && (dominio.indexOf(".") >= 1) && (dominio.lastIndexOf(".") < dominio
+                    .length - 1)) {} else {
+                alert("E-mail invalido! Por favor digite um E-mail Valido!");
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -20,7 +32,7 @@
         </div>
         <p>
             | <a href="index">Home</a>
-            | <a href="login.html">Entrar</a>
+            | <a href="login">Entrar</a>
             | <a href="cadastro">Cadastre-se</a>
             | <a href="sobre">Sobre </a> |
         </p>
@@ -31,15 +43,15 @@
         o form de cadastro do desenvolvedor e quando clicar no de instituição aparecer o form de cadastro 
         da instiuição -->
         <div class="botao-cads">
-            <button>Desenvolvedor</button>
-            <button>Instituição</button>
+            <button><a href="cadastro">Desenvolvedor</a></button>
+            <button><a href="cadinst">Instituição</a></button>
         </div>
            <div class="empresa">
-            <form action="cadinst" method="post">{% csrf_token %}
+            <form action="cadinst" method="post" name="f1">{% csrf_token %}
                 <label>Nome da Instituição</label>
                 <input type="text" name="nome">
                 <label>Email Corporativo</label>
-                <input type="email" name="email">
+                <input type="email" name="email" onblur="validacaoEmail(f1.email)">
                 <label>Senha</label>
                 <input type="password" name="senha">
                 <label for="genero">Segmento</label>

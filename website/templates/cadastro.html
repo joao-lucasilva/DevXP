@@ -11,6 +11,18 @@
     <link href="https://fonts.googleapis.com/css?family=Anton|Days+One|Nunito|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
     <title>DevXP - Cadastro</title>
+    <script language="Javascript">
+        function validacaoEmail(field) {     
+            usuario = field.value.substring(0, field.value.indexOf("@"));
+            dominio = field.value.substring(field.value.indexOf("@") + 1, field.value.length);
+            if ((usuario.length >= 1) && (dominio.length >= 3) && (usuario.search("@") == -1) &&
+                (dominio.search("@") == -1) && (usuario.search(" ") == -1) && (dominio.search(" ") == -1) &&
+                (dominio.search(".") != -1) && (dominio.indexOf(".") >= 1) && (dominio.lastIndexOf(".") < dominio
+                    .length - 1)) {} else {
+                alert("E-mail invalido! Por favor digite um E-mail Valido!");
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -31,15 +43,15 @@
         o form de cadastro do desenvolvedor e quando clicar no de instituição aparecer o form de cadastro 
         da instiuição -->
         <div class="botao-cads">
-            <button>Desenvolvedor</button>
-            <button>Instituição</button>
+            <button><a href="cadastro">Desenvolvedor</a></button>
+            <button><a href="cadinst">Instituição</a></button>
         </div>
         <div class="dev">
-            <form action="cadastro" method="post">{% csrf_token %}
+            <form action="cadastro" method="post" name="f1">{% csrf_token %}
                 <label>Nome</label>
                 <input type="text" name="nome">
                 <label>Email</label>
-                <input type="email" name="email">
+                <input type="email" name="email" onblur="validacaoEmail(f1.email)">
                 <label>Senha</label>
                 <input type="password" name="senha">
                 <label for="genero">Gênero</label>
@@ -65,30 +77,6 @@
                 </div>
             </form>
         </div>
-        <!--      <div class="empresa">
-            <form action="" method="post">
-                <label>Nome da Instituição</label>
-                <input type="text" name="nome">
-                <label>Email Corporativo</label>
-                <input type="email" name="email">
-                <label>Senha</label>
-                <input type="password" name="senha">
-                <label>Confirme sua senha</label>
-                <input type="password" name="senha_confirm">
-                <label for="genero">Segmento</label>
-                <select name="segmento" id="">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <label>Telefone(WhatsApp)</label>
-                <input type="number" name="telefone">
-                <div class="posicao-button">
-                    <button type="submit">Cadastrar</button>
-                </div>
-            </form>
-        </div>
-    -->
     </header>
     <footer>
         <div class="redes-sociais">

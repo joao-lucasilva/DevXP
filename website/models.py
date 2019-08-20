@@ -99,4 +99,4 @@ class Projeto(models.Model):
     ativo = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.instituicao + '-'+ self.nome_projeto
+        return self.nome_projeto
