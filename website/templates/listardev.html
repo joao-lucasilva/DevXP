@@ -18,17 +18,19 @@
             <img src="{% static 'css/img/logo.png' %}" alt="Logo do site">
         </div>
     </nav>
+    <header>
     <h1>Projetos Abertos</h1>
     <p>
         {% for proj in projetos %}
-        <p>{{proj.instituicao.nome_inst}}</p>
+        <h4>{{proj.instituicao.nome_inst}}</h4>
         <p>{{proj.nome_proj}}</p>
         <p>{{proj.descricao}}</p>
         <p>Telefone para Contato: {{proj.instituicao.telefone_inst}}</p>
-        <hr>
+        <hr></hr>
         
         {% endfor %}
     </p>
+    </header>
     <footer>
         <div class="redes-sociais">
             <a href="#"><img src="{% static 'css/img/icon1.png' %}" alt="Logo do facebook"
