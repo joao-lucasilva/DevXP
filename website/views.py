@@ -42,7 +42,7 @@ def loginDev(request):
                         return render(request, 'login.html', msg)
                 else:
                         msg = {'instituicao': login1}                   
-                        return redirect('http://localhost:8000/listardev')
+                        return redirect('/listardev')
         return render(request, 'login.html',{})
 
 def cadastroInst(request):
@@ -89,7 +89,7 @@ def cadastrarProjeto(request):
                         proj.nome_projeto = request.POST.get('nome')
                         proj.descricao = request.POST.get('descricao')
                         proj.save()
-                        return redirect('http://localhost:8000/listar')
+                        return redirect('/listar')
         msg = {'msg':'Erro ao cadastrar'}
         return render(request, 'cadastrarideia.html', {})
 
