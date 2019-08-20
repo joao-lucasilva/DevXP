@@ -22,8 +22,7 @@
                     | <a href="listar">Ver projetos</a> |
                 </p>
             </nav>
-    
-    {% if inst or instituicao is None %}
+    {% comment %} {% if inst or instituicao.nome_inst is None %}
     <header>
         <h1>Ops!, você precisa se cadastrar primeiro :|</h1>
         <p>
@@ -44,9 +43,9 @@
                 </div>
                 <p class="texto-dev">Desenvolvido por João Lucas e Kevin Christian</p>
             </footer>
-    {% else %}
+    {% else %} {% endcomment %}
     <header>
-        <h1>Cadastre seu projeto {{msg}}{{instituicao.nome_inst}}</h1>
+        <h1>Cadastre seu projeto {{instituicao.nome_inst}}</h1>
         <div class="cadastro"> 
         <form action="cadastrar_projeto" method="post">{% csrf_token %}
                 <input type="hidden" name="inst" value="{{instituicao.nome_inst}}">
@@ -77,5 +76,5 @@
         <p class="texto-dev">Desenvolvido por João Lucas e Kevin Christian</p>
     </footer>
 </body>
-{% endif %}
+{% comment %} {% endif %} {% endcomment %}
 </html>

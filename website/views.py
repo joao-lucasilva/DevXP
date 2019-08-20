@@ -89,7 +89,6 @@ def cadastrarProjeto(request):
                         proj.nome_projeto = request.POST.get('nome')
                         proj.descricao = request.POST.get('descricao')
                         proj.save()
-                        msg = {'msg':'Cadastrado com Sucesso!'}
                         return redirect('http://localhost:8000/listar')
         msg = {'msg':'Erro ao cadastrar'}
         return render(request, 'cadastrarideia.html', {})
@@ -99,6 +98,7 @@ def listarProjetos(request):
         contexto = {
                 'projetos':projetos
         }
+        
         return render(request, 'listar.html', contexto)
 
 
