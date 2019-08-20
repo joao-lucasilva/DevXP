@@ -71,12 +71,12 @@ def loginInst(request):
 
                 if login1 and login2 is None:
                         msg = {'msg': 'Email ou senha inválidos'}
-                        return render(request, 'logininst.html', msg)
+                        return render(request, 'loginst.html', msg)
                 else:
                         msg = {'instituicao': login1}
                         print('Login sucess')
                         return render(request, 'cadastrarideia.html', msg)
-        return render(request, 'logininst.html', {})
+        return render(request, 'loginst.html', {})
                 
 def cadastrarProjeto(request):
         if request.method == 'POST':

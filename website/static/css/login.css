@@ -151,29 +151,6 @@ section{
     flex-direction: row;
 }
 
-section span{
-    background-color: #168039;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4vh;
-    margin: 0 10px;
-    border-radius: 5px;
-    padding: 10px 20px;
-}
-
-section span a{
-    text-decoration: none;
-    font-family: 'Nunito', sans-serif;
-    font-size: 14pt;
-    color: #05F29B; 
-}
-
-section span:hover{
-    background-color: #00261C;
-    color: #ffffff;
-}
-
 footer{
     grid-area: footer;
     font-family: 'Nunito', sans-serif;

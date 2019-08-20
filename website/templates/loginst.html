@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="css/img/icone_pg.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Anton|Days+One|Nunito|Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
     <script defer src="js/login.js"></script>
     <title>DevXP - Login</title>
     <script language="Javascript">
@@ -45,8 +45,8 @@
         <h1>Entrar</h1>
         {{ contexto }}
         <div class="botao-cads">
-            <button id="dev">Desenvolvedor</button>
-            <button id="inst">Instituição</button>
+            <button id="dev"><a href="login">Desenvolvedor</a></button>
+            <button id="inst"><a href="loginst">Instituição</a></button>
         </div>
         <!-- Aqui em vez de fazer outra div para empresa, podemos fazer um script js para alterar a class
         desta div e o action do form para ir para o action da empresa, quando a pessoa selecionar se é 
