@@ -21,15 +21,20 @@ Estudantes das áreas de TI em seu período letivo procura uma vaga de estágio 
 A plataforma visa proporcionar experiências em projetos práticos para estudantes  que tenham um perfil de  desenvolvedor (programação) e de gestão/negócio. 
 O DevXP cria uma conexão entre os estudantes da área de TI com ONG’s e Instituições que necessitam de serviços de tecnologia como sites, aplicativos mobile, etc. Em troca dos serviços as empresas oferecem um certificado de trabalho voluntário comprovando o tempo de desenvolvimento do projeto e as habilidades adquiridas. Assim, o estudante terá um portfólio de projetos desenvolvidos para apresentar as futuras  vagas de estágio que se candidatar. 
 ## Como Funciona
-* Após as instituições realizarem o cadastro, podem cadastrar os projetos que querem que seja  desenvolvido, com dados de contato, assim, os estudantes e desenvolvedores poderão visualizar os projetos e entrar em contato com a instituição caso desejem desenvolve-los. 
+* Após as instituições realizarem o cadastro, podem cadastrar os projetos que querem que seja  desenvolvido, com dados de contato, assim, os estudantes e desenvolvedores poderão visualizar os projetos e entrar em contato com a instituição caso desejem desenvolve-los.
+
 ![Cadastro de instituição](https://github.com/joao-lucasilva/DevXP/blob/master/website/static/css/img/cadinst.JPG?raw=true)
 ![Cadastro de projeto](https://github.com/joao-lucasilva/DevXP/blob/master/website/static/css/img/cadprojeto.JPG?raw=true)
+
 * Os estudantes de tecnologia podem cadastrar seu perfil, e indicar a área de atuação em que querem realizar os projetos, daí verão uma lista com os projetos em aberto das instituições e os dados para entrarem em contato com as instituições.
+
 ![Cadastro Estudante](https://github.com/joao-lucasilva/DevXP/blob/master/website/static/css/img/caddev.JPG?raw=true)
 ![Lista de Projetos](https://github.com/joao-lucasilva/DevXP/blob/master/website/static/css/img/listaprojetos.JPG?raw=true)
 ## Como Usar
 Você pode testar o software neste link: https://devxp.herokuapp.com/index
--- ou -- 
+
+-- ou --
+
 Faça o download do zip ou clone este repositório:
 > git clone https://github.com/joao-lucasilva/DevXP
 
