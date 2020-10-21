@@ -73,6 +73,7 @@ header p{
     font-family: 'Nunito', sans-serif;
     font-size: 15pt;
     text-align: justify;
+    max-width: 1200px;
     margin: 5px 0;
 }
 
