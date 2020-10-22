@@ -67,7 +67,6 @@ Neste projeto foi utilizado:
 ## Autores
 Desenvolvido por João Lucas da Silva e Kevin Christian.
 * Entre em contato comigo:
- [![Linkedin Badge](https://img.shields.io/badge/-JoaoLucas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/joaolucassilva-812819165/)]((https://www.linkedin.com/in/joaolucassilva-812819165/)) | [![Gmail Badge](https://img.shields.io/badge/-joao.lsilva1198@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:joao.lsilva1198@gmail.com)](mailto:joao.lsilva1198@gmail.com)
- | [![Gmail Badge](https://img.shields.io/badge/-joao.lsilva1198@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tgmarinho@gmail.com)](mailto:joao.lsilva1198@gmail.com)
+[![Linkedin Badge](https://img.shields.io/badge/-JoaoLucas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/joaolucassilva-812819165/)](https://www.linkedin.com/in/joaolucassilva-812819165/) | [![Gmail Badge](https://img.shields.io/badge/-joao.lsilva1198@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:joao.lsilva1198@gmail.com)](mailto:joao.lsilva1198@gmail.com))
 * Entre em contato com Kevin:
  [![Linkedin Badge](https://img.shields.io/badge/-kevinnchristian-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/kevinnchristian/)](https://www.linkedin.com/in/kevinnchristian/)| [![Outlook Badge](https://img.shields.io/badge/-kevin.cmribeiro@outlook.com-blue?style=flat-square&link=mailto:kevin.cmribeiro@outlook.com)](mailto:kevin.cmribeiro@outlook.com)
