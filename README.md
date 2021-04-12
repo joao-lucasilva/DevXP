@@ -1,8 +1,10 @@
 # DevXP
+
+![Botão de Versão](https://img.shields.io/badge/Version-5.1-blue) ![HTML5](https://img.shields.io/badge/HTML-5-orange) ![CSS3](https://img.shields.io/badge/CSS-3-blue) ![JavaScript](https://img.shields.io/badge/Java-Script-yellow) ![Python](https://img.shields.io/badge/Python-3-blue) ![Django](https://img.shields.io/badge/Django-2.2.4-green) ![SQLite](https://img.shields.io/badge/SQ-Lite-blue)
+
 ![Logo](https://github.com/joao-lucasilva/DevXP/blob/master/website/static/css/img/icone_pg.png?raw=true)
 
-![Botão de Versão](https://img.shields.io/badge/Version-5.1-blue)
- 
+
 DevXP foi o projeto de conclusão do bootcamp Academia Mastertech em parceria com o Facebook.
 
 O projeto consiste em uma plataforma onde estudantes de tecnologia podem desenvolver sistemas para ONGs, em troca de certificados de trabalho voluntário.
